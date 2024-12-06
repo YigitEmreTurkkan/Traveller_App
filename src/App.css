@@ -1,0 +1,98 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E0F7FA;
+    color: #0D47A1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Başlık Stili */
+h1 {
+    font-size: 2rem;
+    color: #01579B;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Harita Konteyneri */
+#mapContainer {
+    position: relative;
+    width: 100vw;
+    max-width: 1010px;
+    height: 70vh;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Ülke Adı Gösterimi */
+#countryNameDisplay {
+    position: absolute; /* fixed yerine absolute kullanıyoruz */
+    bottom: 10px;
+    left: 50%; /* Ortalamak için */
+    transform: translateX(-50%); /* Ortalamak için */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #01579B;
+    font-weight: bold;
+}
+
+
+/* Bilgi Kutusu */
+#infoBox {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+    width: 200px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#options {
+    margin-top: 10px;
+}
+
+.status-button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.status-button[data-status="visited"] { background-color: #FF6F61; }
+.status-button[data-status="lived"] { background-color: #42A5F5; }
+.status-button[data-status="living"] { background-color: #66BB6A; }
+.status-button[data-status="wantToVisit"] { background-color: #FFA726; }
+.status-button[data-status="notVisited"] { background-color: #D3D3D3; }
